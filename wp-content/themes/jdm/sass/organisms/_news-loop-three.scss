@@ -1,0 +1,136 @@
+.news-loop-three {
+	.container {
+		grid-template-columns: 1fr;
+		position: relative;
+		z-index: 3;
+		@media only screen and (min-width: 500px) {
+			width: 70%;
+		}
+		@include m-min {
+			width: 50%;
+		}
+		@include l-min {
+			width: 960px;
+			grid-template-columns: repeat(12,1fr);
+			grid-template-rows: repeat(3,1fr);
+			grid-column-gap: $lh/2;
+			grid-row-gap: 0;
+		}
+		@include xl-min {
+			width: 1280px;
+			grid-column-gap: $lh;
+		}
+	}
+	.post-item {
+		grid-column: span 1;
+			@include l-min {
+				grid-column: span 3;
+				grid-row: span 1;
+			}
+		&--n-1 {
+			@include l-min {
+				grid-column: span 6;
+				grid-row: span 2;
+			}
+			.post-item__title {
+				font-size: 16px; 
+				@include m-min {
+					font-size: 18px;
+				}
+				@include l-min {
+					font-size: 20px;
+				}
+			}
+		}
+		&--n-2,
+		&--n-3 {
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			align-items: center;
+			@include m-min {
+				display: block;
+			}
+			@include l-min {
+				display: grid;
+				grid-column: span 6;
+				grid-row: span 1;
+			}
+			&__image {
+				grid-column: span 1;
+			}
+			&__content {
+				grid-column: span 1;
+			}
+			.post-item__content {
+				padding: 10px;
+				@include m-min {
+					padding: $lh;
+				}
+			}
+			.post-item__category {
+				display: none;
+				@include m-min {
+					display: inline-block;
+				}
+			}
+			.post-item__image,
+			.post-item__permalink-image,
+			.post-item__post-image {
+				height: 100%;
+				@media only screen and (min-width: 360px) {
+					height: auto;
+				}
+				@include l-min {
+					height: 100%;
+				}
+			}
+			.post-item__image,
+			.post-item__post-image {
+				border-radius: 18px 0 0 18px;
+				@include m-min {
+					border-radius: 18px 18px 0 0;
+				}
+				@include l-min {
+					border-radius: 18px 0 0 18px;
+				}
+			}
+
+		}
+		&--n-4  .post-item__image,
+		&--n-5 .post-item__image,
+		&--n-6 .post-item__image,
+		&--n-7 .post-item__image {
+				display: none;
+		}
+		// Font title
+		&--n-2 .post-item__title,
+		&--n-3 .post-item__title,
+		&--n-4 .post-item__title,
+		&--n-5 .post-item__title,
+		&--n-6 .post-item__title,
+		&--n-7 .post-item__title {
+			font-size: 13px;
+			@media only screen and (min-width: 360px) {
+				font-size: 14px;
+			}
+			@include m-min {
+				font-size: 16px;
+			}
+			@include xl-min {
+				font-size: 18px;
+			}
+		}
+		// Remove excerpt
+		&--n-2 .post-item__wrapper-excerpt,
+		&--n-3 .post-item__wrapper-excerpt,
+		&--n-4 .post-item__wrapper-excerpt,
+		&--n-5 .post-item__wrapper-excerpt,
+		&--n-6 .post-item__wrapper-excerpt,
+		&--n-7 .post-item__wrapper-excerpt {
+			display: none;
+			@include m-min {
+				display: block;
+			}
+		}
+	}
+}

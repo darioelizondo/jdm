@@ -1,0 +1,48 @@
+.wrapper-main-news {
+	display: grid;
+	grid-template-columns: 1fr; 
+	@include m-min {
+		grid-template-columns: repeat(2,1fr);
+	}
+	@include l-min {
+		grid-template-columns: repeat(12,1fr);
+		grid-template-rows: repeat(2,1fr);
+	}
+	.main-news {
+		&.main-news--n-1 {
+			grid-column: span 1;
+			@include m-min {
+				grid-column: span 2;
+				height: auto;
+			}
+			@include l-min {
+				grid-column: 1 / 9;
+				grid-row: span 2;
+			}
+		}
+	}
+	.main-news {
+		&.main-news--n-2 {
+			grid-column: span 1;
+			@include m-min {
+				grid-column: span 1;
+			}
+			@include l-min {
+				grid-column: 9 / 13;
+				grid-row: span 1;
+			}
+		}
+	}
+	.main-news {
+		&.main-news--n-3 {
+			grid-column: span 1;
+			@include m-min {
+				grid-column: span 1;
+			}
+			@include l-min {
+				grid-column: 9 / 13;
+				grid-row: span 1;
+			}
+		}
+	}
+}

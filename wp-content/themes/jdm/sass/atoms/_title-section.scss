@@ -1,0 +1,32 @@
+.title-section {
+	&__title {
+		color: $color_secundary;
+		font-family: $ff1;
+		font-size: 18px;
+		line-height: $lh;
+		padding-bottom: $lh;
+		text-align: center;
+		@include m-min {
+			font-size: 20px;
+		}
+		@include l-min {
+			text-align: left;
+			font-size: 22px;
+			line-height: $lh*1.5;
+			padding-bottom: 0;
+		}
+		// @include xl-min {
+		// 	font-size: $lh;
+		// }
+	}
+	&__line {
+		display: none;
+		width: 100%;
+		height: 1px;
+		background: #445766;
+		margin: $lh 0;
+		@include l-min {
+			display: block;
+		}
+	}
+}

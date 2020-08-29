@@ -1,0 +1,12 @@
+//Container
+.container {
+	display: grid;
+	width: 90%;
+	margin: 0 auto;
+	@include l-min {
+		width: 960px;
+	}
+	@include xl-min {
+		width: 1280px;
+	}
+}

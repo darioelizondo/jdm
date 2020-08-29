@@ -1,0 +1,15 @@
+.header {
+	display: grid;
+	grid-template-columns: repeat(12,1fr);
+	grid-gap: $lh/2;
+	padding: $lh/2 $lh;
+	border-bottom: solid 3px $color-secundary;
+	align-items: center;
+	transition: .4s ease;
+	@include l-min {
+		padding: 0 $lh;
+	}
+	&.active {
+		padding-bottom: 6px;
+	}
+}

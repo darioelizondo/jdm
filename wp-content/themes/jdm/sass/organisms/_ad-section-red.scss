@@ -1,0 +1,42 @@
+.ad-section-red {
+	position: relative;
+	margin-top: -50px;
+	z-index: 1;
+	@include m-min {
+		margin-top: -75px;
+	}
+	@include l-min {
+		margin-top: -100px;
+	}
+	@include xl-min {
+		margin-top: -150px;
+	}
+	.ad-leaderboard {
+		width: 320px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		@include m-min {
+			width: auto;
+		}
+	}
+	&__image {
+		height: 300px;
+		// @media only screen and (min-width: 540px) {
+		// 	height: 250px;
+		// }
+		@include m-min {
+			height: 350px;
+		}
+		@media only screen and (min-width: 750px) {
+			height: 400px;
+		}
+		@include l-min {
+			height: 550px;
+		}
+		@include xl-min {
+			height: 100%;
+		}
+	}
+}

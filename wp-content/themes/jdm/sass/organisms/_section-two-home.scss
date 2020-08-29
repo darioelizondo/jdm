@@ -1,0 +1,23 @@
+.section-two-home {
+	background: #f4f4f4;
+	padding-bottom: $lh*2;
+	.title-section {
+		.container {
+			position: relative;
+			margin-top: -90px;
+			z-index: 3;
+			@include m-min {
+				margin-top: -125px;
+			}
+			@include l-min {
+				margin-top: -150px;
+			}
+			@include xl-min {
+				margin-top: -200px;
+			}
+		}
+		&__line {
+			background: #ffffff;
+		}
+	}
+}

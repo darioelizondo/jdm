@@ -1,0 +1,8 @@
+.nav-right {
+	grid-column: span 4;
+	text-align: center;
+	@include m-min {
+		grid-column: span 7;
+		text-align: right;
+	}
+}

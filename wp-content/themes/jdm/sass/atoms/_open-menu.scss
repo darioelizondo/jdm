@@ -1,0 +1,86 @@
+.open-menu {
+	grid-column: span 2;
+	text-align: center;
+	@include m-min {
+		grid-column: span 1;
+	}
+	&__button {
+		border: solid 1px #435460;
+		border-radius: 50%;
+		position: relative;
+		width: 32px;
+		height: 32px;
+		cursor: pointer;
+		transition: .4s ease;
+		@media only screen and (min-width: 400px) {
+			width: 37px;
+			height: 37px;
+		}
+		@include m-min {
+			width: 40px;
+			height: 40px;
+		}
+		background: transparent;
+		// &:hover .header{
+		// 	transform: rotate(180deg);
+		// }
+		&:hover .open-menu__line-3 {
+			width: 17px;
+			left: 50%;
+			@include m-min {
+				width: 20px;
+				left: 50%;
+			}
+		}
+	}
+	&__line-1,
+	&__line-2,
+	&__line-3 {
+		display: block;
+		position: absolute;
+		width: 17px;
+		height: 3px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: $color-primary;
+		transition: .4s ease;
+		@media only screen and (min-width: 400px) {
+			width: 18px;
+		}
+		@include m-min {
+			width: 20px;
+		}
+	}
+	&__line-1 {
+		top: 8px;
+		@media only screen and (min-width: 400px) {
+			top: 10px;;
+		}
+		@include m-min {
+			top: 12px;
+		}
+	}
+	&__line-2 {
+		top: 14px;
+		@media only screen and (min-width: 400px) {
+			top: 16px;;
+		}
+		@include m-min {
+			top: 18px;
+		}
+	}
+	&__line-3 {
+		top: 20px;
+		left: 47%;
+		width: 14px;
+		@media only screen and (min-width: 400px) {
+			top: 22px;
+			left: 45%;
+		}
+		@include m-min {
+			top: 24px;
+			left: 44%;
+			width: 15px;
+		}
+	}
+}

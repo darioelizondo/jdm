@@ -1,0 +1,18 @@
+.social {
+	display: none;
+	@include m-min {
+		display: inline;
+		padding: 0 $lh/3;
+
+	}
+	&__icon {
+		width: 40%;
+		vertical-align: middle;
+		@include m-min {
+			width: 25px;
+		}
+		@include l-min {
+			width: 30px;
+		}
+	}
+}

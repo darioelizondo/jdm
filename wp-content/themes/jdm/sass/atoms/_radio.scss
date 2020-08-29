@@ -1,0 +1,28 @@
+.radio {
+	display: none;
+	@include m-min {
+		display: inline;
+		padding: 0 $lh/3;
+	}
+	&__image {
+		width: 40%;
+		vertical-align: middle;
+		@include m-min {
+			width: 30px;
+		}
+		@include l-min {
+			width: 35px;
+		}
+	}
+	&__info {
+		display: inline;
+		font-family: $ff1;
+		font-size: 14px;
+		line-height: $lh;
+		vertical-align: middle;
+		@include l-min {
+			font-size: 16px;
+		}
+	}
+}
+

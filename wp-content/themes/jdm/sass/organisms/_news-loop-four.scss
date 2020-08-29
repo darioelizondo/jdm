@@ -1,0 +1,24 @@
+.news-loop-four {
+	.container  {
+		grid-template-columns: 1fr;
+		@media only screen and (min-width: 500px) {
+			width: 70%;
+		}
+		@include m-min {
+			width: 50%;
+		}
+		@include l-min {
+			width: 960px;
+			grid-template-columns: repeat(4,1fr);
+			grid-gap: $lh/2;
+		}
+		@include xl-min {
+			width: 1280px;
+			grid-gap: $lh;
+		}
+	}
+	.post-item,
+	.ad-inline-rectangle {
+		grid-column: span 1;
+	}
+}

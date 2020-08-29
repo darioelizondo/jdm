@@ -1,0 +1,12 @@
+.logo {
+	&__image {
+		display: block;
+		width: 100%;
+		@include m-min {
+			width: 165px;
+		}
+		@include l-min {
+			width: 225px;
+		}
+	}
+}

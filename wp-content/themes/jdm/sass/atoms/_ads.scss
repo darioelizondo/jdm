@@ -1,0 +1,41 @@
+.ad-billboard {
+	padding: $lh*2 0;
+	text-align: center;
+	&__link {
+		display: block;
+	}
+	&__image {
+		display: block;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+
+.ad-leaderboard {
+	padding: $lh*2 0;
+	text-align: center;
+	&__link {
+		display: block;
+	}
+	&__image {
+		display: block;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+
+.ad-inline-rectangle {
+	padding: $lh*2 0;
+	text-align: center;
+	&__link {
+		display: block;
+	}
+	&__image {
+		display: block;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+	}
+}

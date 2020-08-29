@@ -1,0 +1,25 @@
+.featured-news {
+	padding-bottom: $lh*2;
+	background: #f4f4f4;
+	&__image-socle {
+		width: 100%;
+	}
+	&__wrapper {
+		margin-top: -175px;
+		@media only screen and (min-width: 400px) {
+			margin-top: -250px;
+		}
+		@include m-min {
+			margin-top: -175px;
+		}
+		@media only screen and (min-width: 840px) {
+			margin-top: -250px;
+		}
+		@include l-min {
+			margin-top: -300px;
+		}
+		@include xl-min {
+			margin-top: -400px;
+		}
+	}
+}
